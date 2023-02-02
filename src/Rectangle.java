@@ -1,4 +1,13 @@
 import java.text.DecimalFormat;
+
+/**
+ * @file Rectangle.java
+ * @date 2/2/2023
+ * @author Caroline Nielsen
+ *
+ * @description Creates a rectangle with a width and height or a square with a side length.
+ * The user can also calculate the perimeter and area of the rectangle and print information about the Rectangle.
+ */
 public class Rectangle { //make public for CS A
 
     //instance variables
@@ -37,8 +46,16 @@ public class Rectangle { //make public for CS A
      */
 
     public double getWidth(){
-        this.width = width;
+       // this.width = width;
         return width;
+    }
+
+    /**
+     *
+     * @return the height of the rectangle
+     */
+    public double getHeight(){
+        return height;
     }
 
     //mutators
@@ -59,5 +76,13 @@ public class Rectangle { //make public for CS A
 
 
     //toString method
+    @Override
+    /**
+     * Prints the height and width of rectangle to 2 decimal places
+     */
+    public String toString(){
+        DecimalFormat df = new DecimalFormat("#.##");
+        return "The height of the rectangle is " + df.format(height) + " and the width is " + df.format(width) + ".";
+    }
 
 }
